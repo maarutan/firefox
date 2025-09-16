@@ -1,0 +1,58 @@
+"  ┌┬┐┬─┐┬┌┬┐┌─┐┌─┐┌┬┐┬ ┬┬  ┬─┐┌─┐
+"   │ ├┬┘│ ││├─┤│   │ └┬┘│  ├┬┘│  
+" o ┴ ┴└─┴─┴┘┴ ┴└─┘ ┴  ┴ ┴─┘┴└─└─┘
+" ---------------------------------------->
+" General Settings
+
+set update.lastchecktime 1757892179857
+set configversion 2.0
+
+colourscheme default
+
+set keyboardlayoutbase qwerty
+set keyboardlayoutforce true
+
+set smoothscroll true
+set editorcmd $TERMINAL -e nvim
+set hintchars qwertyuiopasdfghjklzxcvbnm
+
+"  command line mode 
+
+bind --mode=ex <C-j> ex.next_completion
+bind --mode=ex <C-k> ex.prev_completion
+
+bind --mode=ex <A-k> ex.prev_history
+bind --mode=ex <A-j> ex.next_history
+
+" normal mode
+
+bind --mode=normal <A-P> pin
+bind --mode=normal <A-p> pin
+
+bind --mode=normal b fillcmdline tab
+bind --mode=normal B fillcmdline taball
+
+bind --mode=normal H back
+bind --mode=normal r reload
+bind --mode=normal R reloadhard
+bind --mode=normal x stop
+bind --mode=normal L forward
+
+bind --mode=normal J tabprev
+bind --mode=normal K tabnext
+
+bind n findnext
+bind p findnext --reverse
+
+"search 
+
+bind / fillcmdline find
+bind ? fillcmdline find --reverse
+bind n findnext --search-from-view
+bind N findnext --search-from-view --reverse
+bind gn findselect
+bind gN composite findnext --search-from-view --reverse; findselect
+bind <Space> nohlsearch
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
