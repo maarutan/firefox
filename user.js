@@ -6,6 +6,10 @@
 // Enable custom stylesheets (userChrome.css / userContent.css)
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 
+// always restore the last session
+user_pref("browser.startup.page", 3);
+user_pref("browser.sessionstore.resume_session_once", false);
+
 // === Dark Theme Settings ===
 // Use dark theme for UI
 user_pref("ui.systemUsesDarkTheme", 1); // 1 = force dark UI
